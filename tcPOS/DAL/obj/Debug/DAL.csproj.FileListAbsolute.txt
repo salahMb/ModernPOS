@@ -1,0 +1,10 @@
+C:\Users\Salah_Laptop\tcPOS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Salah_Laptop\tcPOS\DAL\bin\Debug\DAL.dll.config
+C:\Users\Salah_Laptop\tcPOS\DAL\bin\Debug\DAL.dll
+C:\Users\Salah_Laptop\tcPOS\DAL\bin\Debug\DAL.pdb
+C:\Users\Salah_Laptop\tcPOS\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Salah_Laptop\tcPOS\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Salah_Laptop\tcPOS\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Salah_Laptop\tcPOS\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Salah_Laptop\tcPOS\DAL\obj\Debug\DAL.dll
+C:\Users\Salah_Laptop\tcPOS\DAL\obj\Debug\DAL.pdb

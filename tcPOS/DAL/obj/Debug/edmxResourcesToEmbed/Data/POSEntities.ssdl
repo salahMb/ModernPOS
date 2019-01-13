@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="POSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_ar" Type="nvarchar" MaxLength="150" />
+    <Property Name="Name_en" Type="nvarchar" MaxLength="150" />
+    <Property Name="Is_Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="Is_Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Mobile_Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Order_Details">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Order_ID" Type="bigint" />
+    <Property Name="Product_ID" Type="bigint" />
+    <Property Name="Unit_Price" Type="float" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Discount" Type="float" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" />
+    <Property Name="Created_By" Type="nvarchar" MaxLength="250" />
+    <Property Name="Total_Price" Type="float" />
+    <Property Name="Customer_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Payment_Type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="Is_Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="Product_Order_Item">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quantity_Sold" Type="int" />
+    <Property Name="Price_Per_Unit" Type="float" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Tax_Amount" Type="float" />
+    <Property Name="Order_ID" Type="bigint" />
+    <Property Name="Product_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_ar" Type="nvarchar" MaxLength="150" />
+    <Property Name="Name_en" Type="nvarchar" MaxLength="150" />
+    <Property Name="Cat_ID" Type="bigint" />
+    <Property Name="Is_Active" Type="bit" />
+    <Property Name="Prod_Pic" Type="image" />
+    <Property Name="Price" Type="float" />
+    <Property Name="UnitID" Type="bigint" />
+    <Property Name="Created_Date" Type="datetime" />
+    <Property Name="Created_By" Type="datetime" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Tax_Percentage" Type="float" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="Role_Name" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Product_ID" Type="bigint" />
+    <Property Name="Last_Time_Updated" Type="datetime" />
+    <Property Name="In_Stock" Type="int" />
+    <Property Name="Updated_By" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Units">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Is_Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="User_Account">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="300" />
+    <Property Name="User_Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="Email" Type="nvarchar" MaxLength="150" />
+    <Property Name="Password" Type="nvarchar" MaxLength="200" />
+    <Property Name="Password_Salt" Type="nvarchar" MaxLength="100" />
+    <Property Name="Password_hash_Algorithm" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="User_Has_Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Role_Start_Time" Type="datetime" />
+    <Property Name="Role_End_Time" Type="datetime" />
+    <Property Name="Role_ID" Type="bigint" />
+    <Property Name="User_Account_ID" Type="bigint" />
+  </EntityType>
+  <EntityContainer Name="POSModelStoreContainer">
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Currency" EntityType="Self.Currency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order_Details" EntityType="Self.Order_Details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment_Type" EntityType="Self.Payment_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_Order_Item" EntityType="Self.Product_Order_Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Units" EntityType="Self.Units" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Account" EntityType="Self.User_Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Has_Role" EntityType="Self.User_Has_Role" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

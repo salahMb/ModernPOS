@@ -1,0 +1,13 @@
+C:\Users\Salah_Laptop\tcPOS\BL\bin\Debug\BL.dll
+C:\Users\Salah_Laptop\tcPOS\BL\bin\Debug\BL.pdb
+C:\Users\Salah_Laptop\tcPOS\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+C:\Users\Salah_Laptop\tcPOS\BL\obj\Debug\BL.dll
+C:\Users\Salah_Laptop\tcPOS\BL\obj\Debug\BL.pdb
+C:\Users\Salah_Laptop\tcPOS\BL\bin\Debug\Core.dll
+C:\Users\Salah_Laptop\tcPOS\BL\bin\Debug\DAL.dll
+C:\Users\Salah_Laptop\tcPOS\BL\bin\Debug\Domain.dll
+C:\Users\Salah_Laptop\tcPOS\BL\bin\Debug\EntityFramework.dll
+C:\Users\Salah_Laptop\tcPOS\BL\bin\Debug\Core.pdb
+C:\Users\Salah_Laptop\tcPOS\BL\bin\Debug\DAL.pdb
+C:\Users\Salah_Laptop\tcPOS\BL\bin\Debug\Domain.pdb
+C:\Users\Salah_Laptop\tcPOS\BL\bin\Debug\EntityFramework.xml
